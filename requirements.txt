@@ -1,0 +1,4 @@
+teradatasql>=17
+prompt_toolkit>=3
+colorama>=0.4
+termcolor>=1.1

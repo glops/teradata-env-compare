@@ -1,0 +1,5 @@
+*.pyc
+.vscode/.ropeproject/objectdb
+.venv
+__pycache__
+config/database-conf.json

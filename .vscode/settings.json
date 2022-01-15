@@ -1,0 +1,38 @@
+{
+    "files.eol": "\n",
+    "python.languageServer": "Pylance",
+    "python.analysis.typeCheckingMode": "basic",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=119"
+    ],
+    "[python]": {
+        "editor.wordBasedSuggestions": false,
+        "editor.formatOnSave": true,
+        "editor.tabSize": 4,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        },
+        "files.trimTrailingWhitespace": true,
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/run/**": true,
+    },
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "database-conf.json",
+                "database-conf.template.json"
+            ],
+            "url": "./config/json-schemas/database-conf.schema.json"
+        }
+    ],
+}

@@ -1,0 +1,31 @@
+{
+    "app": "AAA",
+    "databaseNamePattern": "${app}_${db}_${env}",
+    "servers": [
+        {
+            "name": "dev",
+            "host": "teradata_dev",
+            "defaultUser": "#### VALUE HERE ####",
+            "defaultPassword": "#### VALUE HERE ####",
+            "environments": [
+                {
+                    "name": "DEV"
+                },
+                {
+                    "name": "INT"
+                }
+            ]
+        },
+        {
+            "name": "prod",
+            "host": "teradata_prod",
+            "defaultUser": "#### VALUE HERE ####",
+            "defaultPassword": "#### VALUE HERE ####",
+            "environments": [
+                {
+                    "name": "PROD"
+                }
+            ]
+        }
+    ]
+}

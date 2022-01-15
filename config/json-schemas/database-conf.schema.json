@@ -1,0 +1,126 @@
+{
+    "title": "ConfigFile",
+    "type": "object",
+    "properties": {
+        "app": {
+            "title": "App",
+            "env_names": [
+                "app"
+            ],
+            "type": "string"
+        },
+        "databaseNamePattern": {
+            "title": "Databasenamepattern",
+            "env_names": [
+                "databasenamepattern"
+            ],
+            "type": "string"
+        },
+        "servers": {
+            "title": "Servers",
+            "env_names": [
+                "servers"
+            ],
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/Server"
+            }
+        }
+    },
+    "required": [
+        "app",
+        "databaseNamePattern",
+        "servers"
+    ],
+    "additionalProperties": false,
+    "definitions": {
+        "Environment": {
+            "title": "Environment",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Name",
+                    "env_names": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                "code": {
+                    "title": "Code",
+                    "env_names": [
+                        "code"
+                    ],
+                    "type": "string"
+                },
+                "user": {
+                    "title": "User",
+                    "env_names": [
+                        "user"
+                    ],
+                    "type": "string"
+                },
+                "password": {
+                    "title": "Password",
+                    "env_names": [
+                        "password"
+                    ],
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name"
+            ],
+            "additionalProperties": false
+        },
+        "Server": {
+            "title": "Server",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "title": "Name",
+                    "env_names": [
+                        "name"
+                    ],
+                    "type": "string"
+                },
+                "host": {
+                    "title": "Host",
+                    "env_names": [
+                        "host"
+                    ],
+                    "type": "string"
+                },
+                "defaultUser": {
+                    "title": "Defaultuser",
+                    "env_names": [
+                        "defaultuser"
+                    ],
+                    "type": "string"
+                },
+                "defaultPassword": {
+                    "title": "Defaultpassword",
+                    "env_names": [
+                        "defaultpassword"
+                    ],
+                    "type": "string"
+                },
+                "environments": {
+                    "title": "Environments",
+                    "env_names": [
+                        "environments"
+                    ],
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Environment"
+                    }
+                }
+            },
+            "required": [
+                "name",
+                "host",
+                "environments"
+            ],
+            "additionalProperties": false
+        }
+    }
+}
